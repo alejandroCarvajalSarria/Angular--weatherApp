@@ -1,3 +1,4 @@
+import { WeatherService } from './services/weather.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'project-gradiweb';
+  weatherBogota:any;
+  cityNameBogota:string="BR-RJ";
+  constructor(private weatherService:WeatherService){
+   this.weatherBogota=this.weatherService.getWeatherOfCity(this.cityNameBogota);   
+  }
+
+
 }
