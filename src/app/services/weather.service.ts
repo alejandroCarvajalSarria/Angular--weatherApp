@@ -15,14 +15,14 @@ export class WeatherService {
 
     const httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-      }),
-      withCredentials: false
+        'Content-Type': 'application/json'
+      })
     };
 
-    // q={city name}&appid={API key}
+// q=Bogota,co&units=metric&appid=112276c68784e8c5396cc01eb6f6105c
+
 console.log(cityName)
-    const respond: any = await this.httpClient.get(environment.apiOpenWeather+"?q="+cityName + "&appid="+environment.apiKeyOpenWeather, httpOptions).toPromise();
+    const respond: any = await this.httpClient.get(environment.apiOpenWeather+"?q="+cityName +"&units=metric&appid="+environment.apiKeyOpenWeather, httpOptions).toPromise();
     if (!respond) { throwError('respond'); }
     return respond;
   }

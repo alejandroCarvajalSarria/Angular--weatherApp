@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'project-gradiweb';
   weatherBogota:any;
-  cityNameBogota:string="BR-RJ";
+  cityNameBogota:string="Bogota, co";
   constructor(private weatherService:WeatherService){
    this.weatherBogota=this.weatherService.getWeatherOfCity(this.cityNameBogota);   
   }
