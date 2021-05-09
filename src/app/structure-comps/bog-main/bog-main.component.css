@@ -1,0 +1,72 @@
+    #mainImage{
+    width: 95%;
+    margin: 30px auto;
+    border-radius: 10px;
+    /* border: .1px solid #000; */
+    background-image: url(./../../../assets/imgs/bogota_2.png);
+    height: 500px;
+    display: block;
+    }
+
+    #mainImageGray{
+    background-color: rgba(255, 255, 255, 0.5);
+    height: inherit;
+    display: block;
+    }
+
+    #absoluteBogotaLogo{
+    position: absolute;
+    width: 350px;
+    height: 100px;
+    top: 200px;
+    left: 300px;
+    background-image: url(./../../../assets/imgs/bogotaLogo.png);
+    }
+
+    #mainBogFixed{
+    height: 250px;
+    width: 130px;
+    position: fixed;
+    top: 150px;
+    left: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: -10px;
+    border-bottom-right-radius: 10px;
+    background-color: #2d4396;
+    }
+
+    #logoBogCont{
+    height: 50%;
+    width: 100%;
+    background-color: #f8ac23;
+    border-bottom-right-radius:20px ;
+    border-top-right-radius:10px ;
+    }
+
+    #mainTempBogota{
+    text-align: center;
+    color: #FFF;
+    text-shadow: 2px 2px 4px #000;
+    font-family: "OpenSans_";
+    font-size: 3rem;
+    /* width: 90%; */
+    display: inline-block;
+    }
+
+    #centigradeLogoBog{
+    color: #FFF;
+    display: inline-block;
+    font-family: "OpenSans_";
+    text-shadow: 2px 2px 4px #000;
+    position: relative;
+    bottom: 18px;
+    right: 0;
+    }
+
+    #mainTempBogCont{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    }
+

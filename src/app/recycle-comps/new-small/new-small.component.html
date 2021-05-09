@@ -1,0 +1,49 @@
+<div class="mainCont">
+
+    <div class="topCont">
+
+        <div class="weatherLogoBg">
+            <div class="weatherLogo backImageCon" [id]='countryObj.sys.id'></div>
+        </div>
+
+        <!-- [style.backgroundImage]="setWeatherImg(countryObj.weather[0].icon)" -->
+
+        <div class="mainWeatherCont">
+            <div class="weatherInCont">
+                <h1 class="mainWeather">{{roundMe(countryObj.main.temp)}}</h1>
+                <h3 class="centigradeLogo">&#176;C</h3>
+            </div>
+        </div>
+
+        <div class="locationNameCont">
+            <h1 class="mainCityName">{{countryObj.name}}</h1>
+            <h3 class="mainCountryName">{{returnFullCountryName(countryObj.sys.country)}}</h3>
+        </div>
+
+    </div>
+
+    <div class="bottomCont">
+        <div class="humidityCont">
+            <p class="capitalize bottomContP" >
+                {{countryObj.weather[0].description}} 
+            </p>
+        </div>
+
+        <div class="humidityCont">
+            <p class="bottomContP">
+                Humidity: {{countryObj.main.humidity}}%
+            </p>
+        </div>
+
+        <div class="humidityCont">
+            <p class="bottomContP">
+                Wind: {{countryObj.wind.speed}} Km/Hr
+            </p>
+        </div>
+    </div>
+    
+</div>
+
+<div> {{countryObj | json}} </div>
+<!-- <div>MAIN? {{countryObj.weather[0].icon}}</div> -->
+<!-- <div> {{countryObj.weather[0].description}} </div> -->
