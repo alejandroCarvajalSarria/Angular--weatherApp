@@ -1,3 +1,22 @@
-<div>
-  {{weatherBogota|json}}
+
+
+
+
+
+
+
+<app-bog-main [bogotaObj]="theWeatherBogota"></app-bog-main>
+
+<!-- <div *ngFor="let country of theWeathers">
+  <app-small-weather [countryObj]="country"></app-small-weather>
+  Hello
+</div> -->
+
+
+
+<div *ngFor="let country of theWeathers">
+<app-new-small [countryObj]="country"></app-new-small>
 </div>
+
+
+
