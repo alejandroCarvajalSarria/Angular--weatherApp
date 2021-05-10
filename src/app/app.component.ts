@@ -27,22 +27,22 @@ export class AppComponent  {
   mockDaily:any = daily;
   constructor(private weatherService:WeatherService){
 
-    // Promise.all([
-    //    this.weatherService.getWeatherOfCity(this.cityNameBogota), 
-    //   this.weatherService.getWeatherOfCity(this.cityNameParis), 
-    //   this.weatherService.getWeatherOfCity(this.cityNameBerlin)])
-    //   .then(values => {
-    //   // console.log(values); // [3, 1337, "foo"]
-    //   for (let x of values) {
-    //     if(x.sys.country !== 'CO'){
-    //       console.log(x);
-    //       this.myCountriesArr.push(x);
-    //     }else{
-    //       this.weatherBogota = x;
-    //     }
-    //   }
+    Promise.all([
+       this.weatherService.getWeatherOfCity(this.cityNameBogota), 
+      this.weatherService.getWeatherOfCity(this.cityNameParis), 
+      this.weatherService.getWeatherOfCity(this.cityNameBerlin)])
+      .then(values => {
+      // console.log(values); // [3, 1337, "foo"]
+      for (let x of values) {
+        if(x.sys.country !== 'CO'){
+          console.log(x);
+          this.myCountriesArr.push(x);
+        }else{
+          this.weatherBogota = x;
+        }
+      }
      
-    // });
+    });
 
     // console.log(this.weatherService.getNextDaysWeather(this.cityNameBogota))
 
