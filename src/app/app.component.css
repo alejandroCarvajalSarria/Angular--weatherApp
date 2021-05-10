@@ -1,3 +1,8 @@
     div{
     margin: 40px auto;
     }
+
+    #mainBottomGridCont{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }

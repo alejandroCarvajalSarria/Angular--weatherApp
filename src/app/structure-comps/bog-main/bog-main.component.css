@@ -39,7 +39,8 @@
     #logoBogCont{
     height: 50%;
     width: 100%;
-    background-color: #f8ac23;
+    /* /* background-color: #f8ac23; */
+     background-color: #f5cf89; 
     border-bottom-right-radius:20px ;
     border-top-right-radius:10px ;
     }
@@ -70,3 +71,10 @@
     margin: auto;
     }
 
+    .weatherImage{
+        width: 100%;
+        height: 100%;
+        background-image: url('./../../../assets/imgs/clouds.png');
+    }
+
+    

@@ -10,16 +10,35 @@ import * as $ from 'jquery';
 export class BogMainComponent implements OnInit, AfterViewInit {
 @Input('') bogotaObj:any;
 
+
   constructor(){}
 
   ngOnInit(){
 
   }
 
+  // theMainTemp = Math.round(this.bogotaObj.main.temp)
+
   ngAfterViewInit(){
     $(document).scroll(()=> this.onScrollPositionFix());
+    this.setBogLogo(this.bogotaObj.weather[0].icon);
   }
 
+  setBogLogo(iconCode){
+    const currentWeather = this.bogotaObj.weather[0].main.toLowerCase();
+    const myUrl ="url('http://openweathermap.org/img/wn/"+iconCode+"@2x.png')";
+    const cloudyImage = "./../../../assets/imgs/clouds.png";
+    const clearImage = "./../../../assets/imgs/clear.png";
+    console.log(currentWeather)
+      if(currentWeather == 'clouds'){
+        console.log("HERE")
+        $("#" + this.bogotaObj.sys.id + "BOG").css('background-image', "url('"+cloudyImage+"')");
+      }else if(currentWeather == 'clear'){
+        $("#" + this.bogotaObj.sys.id + "BOG").css('background-image', "url('"+clearImage+"')");
+      }else{
+        $("#" + this.bogotaObj.sys.id + "BOG").css('background-image', myUrl);
+      }
+  }
 
 
   onScrollPositionFix(){
@@ -34,6 +53,10 @@ if(window.scrollY <= 125){
 }
   }
 
+
+  roundThis(it){  
+    Math.round(it);
+  }
 
 
 }

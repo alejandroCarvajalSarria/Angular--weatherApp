@@ -16,6 +16,10 @@
 	text-transform: capitalize!important;
 }
 
+.textCenter{
+	text-align: center;
+}
+
 @font-face {
 	font-family: "openSans_";
 	src: url("./assets/fonts/Open_Sans/OpenSans-Regular.ttf");

@@ -48,6 +48,10 @@ export class NewSmallComponent implements OnInit, AfterViewInit {
       }else if(currentWeather == 'clear'){
         $("#" + this.countryObj.sys.id).css('background-image', "url('"+clearImage+"')");
       }else{
+        console.log(this.countryObj);
+        console.log("HERE!");
+        console.log($("#" + this.countryObj.sys.id));
+        console.log(myUrl);
         $("#" + this.countryObj.sys.id).css('background-image', myUrl);
       }
 
