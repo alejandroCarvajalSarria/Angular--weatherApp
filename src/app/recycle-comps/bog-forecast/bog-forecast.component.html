@@ -1,18 +1,18 @@
 <main>
     <h1 id="mainTitle">3 Day Forecast</h1>
 
-    <div class="forecastCont">
+    <div class="forecastCont" *ngFor="let day of nextBogForecasts">
         <div class="forecastLogoCont">
             <div class="forecastLogo"></div>
         </div>
 
         <div class="forecastDayCont">
-            Friday
+            <p style="margin: 0px auto; padding-top: 30px;" class="textCenter">{{day.day}}</p>
         </div>
 
         <div class="forecastTempsCont">
            <p style="padding: 15px 0px 0px;" class="textCenter">
-            hig/low
+            {{day.max}} / {{day.min}}
            </p>
         </div>
 

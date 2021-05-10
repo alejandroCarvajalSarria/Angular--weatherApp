@@ -8,9 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class BogForecastComponent implements OnInit {
   @Input() nextBogForecasts:any;
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
+    console.log(this.nextBogForecasts)
   }
 
 }

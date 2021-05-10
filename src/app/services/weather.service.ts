@@ -15,19 +15,19 @@ export class WeatherService {
 
   public async getWeatherOfCity(cityName:string): Promise<any> {
 
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    };
+    // const httpOptions = {
+    //   headers: new HttpHeaders({
+    //     'Content-Type': 'application/json'
+    //   })
+    // };
 
-    const respond: any = await this.httpClient.
-    get(environment.apiOpenWeather+"/weather?q="+cityName 
-    +"&units=metric&appid="+environment.apiKeyOpenWeather, 
-    httpOptions).toPromise();
+    // const respond: any = await this.httpClient.
+    // get(environment.apiOpenWeather+"/weather?q="+cityName 
+    // +"&units=metric&appid="+environment.apiKeyOpenWeather, 
+    // httpOptions).toPromise();
 
-    if (!respond) { throwError('respond'); }
-    return respond;
+    // if (!respond) { throwError('respond'); }
+    return "HEllo";
   
   }
 

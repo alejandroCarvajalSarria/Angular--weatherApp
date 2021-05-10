@@ -4,6 +4,8 @@
 }
 
 .forecastCont{
+    font-family: 'OpenSans_';
+    margin: 18px auto;
     display: grid;
     grid-template-columns: auto auto auto;
     width: 100%;
